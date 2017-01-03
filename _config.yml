@@ -1,0 +1,8 @@
+title: Cough Drop
+description: Every voice should be heard
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-slate
+
+gems:
+  - jekyll-mentions

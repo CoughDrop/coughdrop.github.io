@@ -1,2 +1,2 @@
 ### CoughDrop is cool
-... except that it doesn't exist yet. In a minute I'll add a form so you can sign up for notifications.
+Super cool! If you're a dev then someday this page will tell you why it's cool.

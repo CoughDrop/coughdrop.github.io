@@ -1,2 +1,3 @@
-coughdrop.github.com
+CoughDrop
 ====================
+[Check out our repos](https://github.com/coughrop)

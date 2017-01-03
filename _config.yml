@@ -1,7 +1,7 @@
-title: Cough Drop
-description: Every voice should be heard
+title: CoughDrop
+description: Technical Resources
 google_analytics: 
-show_downloads: true
+show_downloads: false
 theme: jekyll-theme-slate
 
 gems:

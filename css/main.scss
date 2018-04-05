@@ -977,6 +977,14 @@ $baseurl: '{{ site.baseurl }}/images';
 				border-radius: 0;
 				width: 100%;
 			}
+			.image_button {
+			  position: relative; 
+			  top: -60px; text-align: 
+			  center; width: 100%;
+			  .button {
+			    background: rgba(0, 0, 0, 0.7);
+			  }
+			}
 		}
 
 		.content {
@@ -1033,6 +1041,14 @@ $baseurl: '{{ site.baseurl }}/images';
 			}
 		}
 	}
+
+  .button_icon {
+    font-size: 30px; 
+    margin-top: -1px; 
+    vertical-align: middle; 
+    display: inline-block;
+    margin-bottom: 4px;
+  }
 
 /* Wrapper */
 

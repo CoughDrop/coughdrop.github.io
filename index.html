@@ -7,8 +7,8 @@ layout: landing
 							<h2><img src="https://www.mycoughdrop.com/images/logo-big.png" style='height: 60px; vertical-align: middle;'> {{ site.title }}</h2>
 							<p>{{ site.description | markdownify }}</p>
 							<ul class="actions">
-								<li><a href="#" class="button special">
-								  <span class='icon fa-play-circle-o' style='font-size: 30px; margin-top: -1px; vertical-align: middle; display: inline-block; margin-bottom: 4px;'></span>
+								<li><a href="#" class="button special inline_video" data-video-id="ELNKXfvTDbA">
+								  <span class='button_icon icon fa-play-circle-o'></span>
 								  What is CoughDrop?
 								</a></li>
 							</ul>
@@ -59,7 +59,13 @@ layout: landing
 						</section>
 						<section class="spotlight">
 							<div class="image">
-							  <a href="#"><img src="images/family_dinner.jpg" alt="" /></a>
+							  <a href="#" class='inline_video' data-video-id='eoiScclYEX4'><img src="images/family_dinner.jpg" alt="" /></a>
+							  <div class='image_button'>
+  							  <a href="#" class='button inline_video' data-video-id="eoiScclYEX4">
+  								  <span class='button_icon icon fa-play-circle-o'></span>
+  							    See how Families Use CoughDrop
+  							  </a>
+  							</div>
 							</div><div class="content">
 								<h2>For Families</h2>
 								<p>Learning to communicate takes help from the people around us. CoughDrop families can
@@ -70,7 +76,13 @@ layout: landing
 						</section>
 						<section class="spotlight">
 							<div class="image">
-							  <a href="#" style='text-decoration: none; border: 0;'><video src="images/reports.mp4" muted="true" autoplay="true" loop="true" style='width: 100%;'></video></a>
+							  <a href="#" class='inline_video' data-video-id='S_6lh5d0cco' style='text-decoration: none; border: 0;'><video src="images/reports.mp4" muted="true" autoplay="true" loop="true" style='width: 100%; margin-bottom: -6px;'></video></a>
+							  <div class='image_button'>
+  							  <a href="#" class='button inline_video' data-video-id='S_6lh5d0cco'>
+  								  <span class='button_icon icon fa-play-circle-o'></span>
+  							    See how Teams Use CoughDrop
+  							  </a>
+  							</div>
 							</div><div class="content">
 								<h2>For Practitioners and Staff</h2>
 								<p>Experts and staff need to be able to see what's working and what isn't. CoughDrop
@@ -129,3 +141,15 @@ layout: landing
 							</ul>
 						</div>
 					</section>
+
+        <div id="video_player" style='display: none; position: fixed; top: 5vh; left: 5vw; width: 90vw; height: 90vh; background: rgba(255, 255, 255, 0.8); border-radius: 5px; z-index: 99999;'>
+          <iframe frameborder='0' id='video_frame' style='background: #fff; width: calc(90vw - 20px); height: calc(90vh - 20px - 75px); margin: 10px;'></iframe>
+          <div style='margin: -5px 10px 5px;'>
+            <a href="#" class='button special big' id='close_video_player' style='vertical-align: middle;'>Close</a>
+            <span id='video_player_times' style='display: none; color: #444; font-size: 20px; margin-left: 20px; background: #fff; box-shadow: rgb(255, 255, 255) 0px 0px 30px 15px; border-radius: 5px; padding: 5px;'>
+              <span id='video_player_time'></span> / 
+              <span id='video_player_duration'></span>
+            </span>
+          </div>
+        </div>
+        

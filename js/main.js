@@ -96,5 +96,53 @@
 			}
 
 	});
+	var videos = document.getElementsByClassName('inline_video');
+	for(var idx = 0; idx < videos.length; idx++) {
+	  var video = videos[idx];
+	  video.addEventListener('click', function(event) {
+	    event.preventDefault();
+	    var video = event.target;
+	    var id = video.getAttribute('data-video-id');
+	    var url = "https://app.mycoughdrop.com/videos/youtube/" + id;
+	    document.getElementById('video_player').style.display = 'block';
+	    document.getElementById('video_frame').src = url;
+	  });
+	}
+	var vp = document.getElementById('close_video_player');
+	vp.addEventListener('click', function(event) {
+	  event.preventDefault();
+    document.getElementById('video_player').style.display = 'none';
+    document.getElementById('video_frame').src = 'about:blank';
+	});
+	window.addEventListener('message', function(event) {
+	  var time_string = function(num) {
+	    if(num >= 60) {
+	      var sec = num % 60;
+	      var min = (num - sec) / 60;
+	      if(sec < 10) { sec = "0" + sec; }
+	      return min + ":" + sec;
+	    } else {
+	      var sec = num.toString();
+	      if(num < 10) { sec = "0" + sec; }
+	      return "0:" + sec;
+	    }
+	  };
+	  var times = document.getElementById('video_player_times');
+	  if(times && event.data && event.data.state) {
+      if(event.data.state && event.data.duration) {
+        (document.getElementById('video_player_time') || {}).innerText = time_string(event.data.time);
+        (document.getElementById('video_player_duration') || {}).innerText = time_string(event.data.duration);
+        times.style.display = 'inline';
+        if(event.data.time >= event.data.duration) {
+          setTimeout(function() {
+            document.getElementById('video_player').style.display = 'none';
+            document.getElementById('video_frame').src = 'about:blank';
+          }, 1000);
+        }
+      } else {
+        times.style.display = 'none';
+      }
+    }
+	});
 
 })(jQuery);

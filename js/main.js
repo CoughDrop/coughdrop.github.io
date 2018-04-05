@@ -101,7 +101,7 @@
 	  var video = videos[idx];
 	  video.addEventListener('click', function(event) {
 	    event.preventDefault();
-	    var video = event.target;
+	    var video = event.currentTarget;
 	    var id = video.getAttribute('data-video-id');
 	    var url = "https://app.mycoughdrop.com/videos/youtube/" + id;
 	    document.getElementById('video_player').style.display = 'block';

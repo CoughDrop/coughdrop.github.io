@@ -1,3 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-05T13:03:39-06:00</updated><id>http://localhost:4000/</id><title type="html">CoughDrop</title><subtitle>Communication is for Everyone.
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CoughDrop</title>
+    <description>Communication is for Everyone.
 CoughDrop&lt;br/&gt; empowers people to make their voices heard.
-</subtitle></feed>
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 05 Apr 2018 13:04:56 -0600</pubDate>
+    <lastBuildDate>Thu, 05 Apr 2018 13:04:56 -0600</lastBuildDate>
+    <generator>Jekyll v3.7.3</generator>
+    
+  </channel>
+</rss>

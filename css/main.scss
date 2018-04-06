@@ -1820,7 +1820,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	body.landing {
 		#page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/bg1.jpg")'));
+//			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/bg1.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1828,10 +1828,10 @@ $baseurl: '{{ site.baseurl }}/images';
 			padding-top: 0;
 		}
 		&.landing_2 #page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/bg2.jpg")'));
+//			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/bg2.jpg")'));
 		}
 		&.landing_3 #page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/bg3.jpg")'));
+//			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/bg3.jpg")'));
 		}
 
 		#footer {
@@ -1847,7 +1847,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			#banner,
 			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/bg1.jpg")'));
+//				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/bg1.jpg")'));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -1855,13 +1855,13 @@ $baseurl: '{{ site.baseurl }}/images';
 			&.landing_2 {
 			  #banner,
   			.wrapper.style4 {
-  				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/bg2.jpg")'));
+//  				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/bg2.jpg")'));
   			}
 			}
 			&.landing_3 {
 			  #banner,
   			.wrapper.style4 {
-  				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/bg3.jpg")'));
+//  				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/bg3.jpg")'));
   			}
 			}
 
@@ -1870,3 +1870,62 @@ $baseurl: '{{ site.baseurl }}/images';
 			}
 		}
 	}
+
+  @keyFrames imageFade {
+    0% { opacity: 1.0; }
+    30% { opacity: 1.0; }
+    36% { opacity: 0.0; }
+    94% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  .backpic {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-attachment: fixed; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    z-index: -1;
+    animation: imageFade 30s linear infinite 10s;
+    &#back1 {
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("/images/bg1.jpg"); 
+      animation-delay: 30s;
+      opacity: 1;
+      
+    }
+    &#back2 {
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("/images/bg2.jpg"); 
+      animation-delay: 20s;
+      opacity: 1;
+    }
+    &#back3 {
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("/images/bg3.jpg"); 
+      opacity: 1;
+    }
+  }
+  .landing_1 {
+    .backpic#back1 {
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("/images/bg2.jpg"); 
+    }
+    .backpic#back2 {
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("/images/bg3.jpg"); 
+    }
+    .backpic#back3 {
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("/images/bg1.jpg"); 
+    }
+  }
+  .landing_2 {
+    .backpic#back1 {
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("/images/bg3.jpg"); 
+    }
+    .backpic#back2 {
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("/images/bg1.jpg"); 
+    }
+    .backpic#back3 {
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("/images/bg2.jpg"); 
+    }
+  }

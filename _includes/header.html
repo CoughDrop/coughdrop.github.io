@@ -16,12 +16,13 @@
             <li><a href="https://app.mycoughdrop.com/pricing">Pricing</a></li>
             <li><a href="https://app.mycoughdrop.com/gift">Gift Purchase</a></li>
             {% for my_page in site.pages %}
-            {% if my_page.title %}
+            {% if my_page.include_nav %}
             <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
             {% endif %}
             {% endfor %}
             <li style='display: none;'><a href="{{ "/feed.xml" | prepend: site.baseurl }}"
                    class="icon fa-feed"> RSS Feed</a></li>
+            <li><a href="https://coughdrop.zendesk.com">Support</a></li>
           </ul>
         </div>
       </li>

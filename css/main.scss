@@ -1955,4 +1955,20 @@ $baseurl: '{{ site.baseurl }}/images';
 	}
   .clean_links a {
     border-bottom: 0;
-  }
+	}
+	
+	@media (min-width: 950px) {
+		.spotlight.with_video {
+			display: block;
+		}
+		.spotlight.with_video .image {
+			float: right;
+			margin-left: 15px;
+			margin-bottom: 10px;
+			width: 550px;
+		}
+		.spotlight.with_video .content {
+			display: inline;
+			padding: 0;
+		}
+	}

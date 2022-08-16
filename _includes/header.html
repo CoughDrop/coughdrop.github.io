@@ -13,8 +13,13 @@
         <div id="menu">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="https://app.mycoughdrop.com/pricing">Pricing</a></li>
-            <li><a href="https://app.mycoughdrop.com/gift">Gift Purchase</a></li>
+            <li style='text-transform: uppercase; font-size: 0.8em;'>Pricing
+              <div style='margin-left: 25px;'>
+                <a href="https://app.mycoughdrop.com/pricing">Individual Pricing</a><br/>
+                <a href="site_license.html">Site License</a><br/>
+                <a href="https://app.mycoughdrop.com/gift">Gift Purchase</a>
+              </div>
+            </li>
             {% for my_page in site.pages %}
             {% if my_page.include_nav %}
             <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
